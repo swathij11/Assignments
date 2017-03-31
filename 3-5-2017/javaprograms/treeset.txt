@@ -1,0 +1,40 @@
+*TreeSet is similar to HashSet except that it sort the elements
+ * in the ascending order while HashSet do not 
+ * maintain any order.
+ * TreeSet does not allow null value element but HashSet allows one null value.
+ * TreeSet class is not synchronized
+ * TreeSet does not contain duplicate elements
+ */
+package com.bgr.collections;
+
+import java.util.TreeSet;
+
+public class TreeSetExample {
+	
+	public static void main(String[] args) {
+		//TreeSet of String Type
+		TreeSet<String> ts = new TreeSet<String>();
+		//Adding elements to TreeSet<String>
+		ts.add("Goutham");
+		ts.add("Rakesh");
+		ts.add("Sandeep");
+		ts.add("Ridwan");
+		
+		//Display TreeSet
+		System.out.println(ts);
+		
+		//TreeSet of Integer Type
+		TreeSet<Integer> treeS = new TreeSet();
+		//Adding Elements to TreeSet<Integer>
+		treeS.add(5);
+		treeS.add(7);
+		treeS.add(80);
+		treeS.add(0);
+		treeS.add(1);
+		
+		//Display TreeSet
+		System.out.println(treeS);
+		
+	}
+
+}

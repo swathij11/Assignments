@@ -1,0 +1,39 @@
+package com.datastructure.Sorting;
+import java.util.*;
+import java.io.*;
+
+public class JukeBox {
+
+	ArrayList<String> songList = new ArrayList<String>();
+	public static void main(String[] args) {
+		new JukeBox().go();
+	}
+	public void go(){
+		getSongs();
+		System.out.println(songList);
+		
+	}
+		void getSongs(){
+			try{
+				File file = new File("E:/SongList.txt.txt");
+				BufferedReader br = new BufferedReader(new FileReader(file));
+				String line  = null;
+				while((line= br.readLine())!= null){
+					addSong1(line);
+				}
+			}
+				catch(Exception ex){
+					ex.printStackTrace();
+				}
+			}
+			public void addSong1(String lineToParse){
+				String[] tokens= lineToParse.split("/");
+				songList.add(tokens[0]);
+				}
+		
+		private void addSong(String line) {
+			// TODO Auto-generated method stub
+			
+		}
+	
+}

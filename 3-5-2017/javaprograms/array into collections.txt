@@ -1,0 +1,26 @@
+ Suppose you have an array of Strings as {"J" , "A", "V", "A", "P", "R", "O", "G", "R", "A", "M"}. 
+ * Write a program to convert this array into a collection and then reverse the strings in the Collection. 
+ * The output should be M, A, R, G, O, R, P, A, V, A, J.
+
+ * */package com.bgr.collections;
+
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
+
+//REVERSE OF AN ARRAY
+public class Prog1 {
+
+	public static void main(String[] args) {
+	
+		String[] st = {"J" , "A", "V", "A", "P", "R", "O", "G", "R", "A", "M"};
+		List<String> li = Arrays.asList(st);
+		Collections.reverse(li);
+		
+		st = (String[]) li.toArray();
+		
+		for(int i=0;i<st.length;i++){
+			System.out.println(st[i]);
+		}
+		
+		}
